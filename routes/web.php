@@ -54,4 +54,9 @@ Route::post('/api/user/reg','Api\TestController@reg');  //用户注册
 Route::post('/api/user/login','Api\TestController@login');     //用户登录
 Route::get('/api/user/list','Api\TestController@userList'); //用户列表
 
+Route::get('/test/postamanl','Api\TestController@postamanl')->middleware('fileter','check.token');
+
      
+Route::post("/reg","Test\TestController@reg");
+Route::post("/login","Test\TestController@login");
+Route::post("/list","Test\TestController@list");
